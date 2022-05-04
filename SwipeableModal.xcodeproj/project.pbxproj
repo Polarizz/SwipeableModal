@@ -37,19 +37,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6D0289FB2822FDC50099094A /* SlideOverCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideOverCard.swift; sourceTree = SOURCE_ROOT; };
-		6D0289FC2822FDC50099094A /* Grabber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grabber.swift; sourceTree = SOURCE_ROOT; };
-		6D0289FD2822FDC50099094A /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = SOURCE_ROOT; };
+		6D0289FB2822FDC50099094A /* SlideOverCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SlideOverCard.swift; path = /Users/polarizz/Downloads/SwipeableModal/SlideOverCard.swift; sourceTree = "<absolute>"; };
+		6D0289FC2822FDC50099094A /* Grabber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Grabber.swift; path = /Users/polarizz/Downloads/SwipeableModal/Grabber.swift; sourceTree = "<absolute>"; };
+		6D0289FD2822FDC50099094A /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapView.swift; path = /Users/polarizz/Downloads/SwipeableModal/SwipeableModal/../MapView.swift; sourceTree = "<absolute>"; };
 		6D54E8322822FBE800D9AF2E /* SwipeableModal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwipeableModal.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6D54E8352822FBE800D9AF2E /* SwipeableModalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableModalApp.swift; sourceTree = "<group>"; };
-		6D54E8372822FBE800D9AF2E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		6D54E8392822FBEA00D9AF2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6D54E8352822FBE800D9AF2E /* SwipeableModalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SwipeableModalApp.swift; path = /Users/polarizz/Downloads/SwipeableModal/SwipeableModal/SwipeableModalApp.swift; sourceTree = "<absolute>"; };
+		6D54E8372822FBE800D9AF2E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = /Users/polarizz/Downloads/SwipeableModal/SwipeableModal/ContentView.swift; sourceTree = "<absolute>"; };
+		6D54E8392822FBEA00D9AF2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = /Users/polarizz/Downloads/SwipeableModal/SwipeableModal/Assets.xcassets; sourceTree = "<absolute>"; };
 		6D54E83C2822FBEA00D9AF2E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6D54E8422822FBEB00D9AF2E /* SwipeableModalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwipeableModalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6D54E8462822FBEB00D9AF2E /* SwipeableModalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableModalTests.swift; sourceTree = "<group>"; };
+		6D54E8462822FBEB00D9AF2E /* SwipeableModalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SwipeableModalTests.swift; path = /Users/polarizz/Downloads/SwipeableModal/SwipeableModalTests.swift; sourceTree = "<absolute>"; };
 		6D54E84C2822FBEB00D9AF2E /* SwipeableModalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwipeableModalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6D54E8502822FBEB00D9AF2E /* SwipeableModalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableModalUITests.swift; sourceTree = "<group>"; };
-		6D54E8522822FBEB00D9AF2E /* SwipeableModalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableModalUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6D54E8502822FBEB00D9AF2E /* SwipeableModalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SwipeableModalUITests.swift; path = /Users/polarizz/Downloads/SwipeableModal/SwipeableModalUITests.swift; sourceTree = "<absolute>"; };
+		6D54E8522822FBEB00D9AF2E /* SwipeableModalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SwipeableModalUITestsLaunchTests.swift; path = /Users/polarizz/Downloads/SwipeableModal/SwipeableModalUITestsLaunchTests.swift; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,16 +116,18 @@
 			children = (
 				6D54E83C2822FBEA00D9AF2E /* Preview Assets.xcassets */,
 			);
-			path = "Preview Content";
-			sourceTree = "<group>";
+			name = "Preview Content";
+			path = "/Users/polarizz/Downloads/SwipeableModal/SwipeableModal/Preview Content";
+			sourceTree = "<absolute>";
 		};
 		6D54E8452822FBEB00D9AF2E /* SwipeableModalTests */ = {
 			isa = PBXGroup;
 			children = (
 				6D54E8462822FBEB00D9AF2E /* SwipeableModalTests.swift */,
 			);
-			path = SwipeableModalTests;
-			sourceTree = "<group>";
+			name = SwipeableModalTests;
+			path = /Users/polarizz/Downloads/SwipeableModal/SwipeableModalTests;
+			sourceTree = "<absolute>";
 		};
 		6D54E84F2822FBEB00D9AF2E /* SwipeableModalUITests */ = {
 			isa = PBXGroup;
@@ -133,8 +135,9 @@
 				6D54E8502822FBEB00D9AF2E /* SwipeableModalUITests.swift */,
 				6D54E8522822FBEB00D9AF2E /* SwipeableModalUITestsLaunchTests.swift */,
 			);
-			path = SwipeableModalUITests;
-			sourceTree = "<group>";
+			name = SwipeableModalUITests;
+			path = /Users/polarizz/Downloads/SwipeableModal/SwipeableModalUITests;
+			sourceTree = "<absolute>";
 		};
 /* End PBXGroup section */
 
