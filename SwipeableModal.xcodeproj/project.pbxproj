@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6D0289FE2822FDC50099094A /* SlideOverCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0289FB2822FDC50099094A /* SlideOverCard.swift */; };
-		6D0289FF2822FDC50099094A /* Grabber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0289FC2822FDC50099094A /* Grabber.swift */; };
 		6D028A002822FDC50099094A /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0289FD2822FDC50099094A /* MapView.swift */; };
+		6D159CB6282596C90005E143 /* Swipeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D159CB5282596C90005E143 /* Swipeable.swift */; };
 		6D54E8362822FBE800D9AF2E /* SwipeableModalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D54E8352822FBE800D9AF2E /* SwipeableModalApp.swift */; };
 		6D54E8382822FBE800D9AF2E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D54E8372822FBE800D9AF2E /* ContentView.swift */; };
 		6D54E83A2822FBEA00D9AF2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D54E8392822FBEA00D9AF2E /* Assets.xcassets */; };
@@ -17,6 +16,7 @@
 		6D54E8472822FBEB00D9AF2E /* SwipeableModalTests in Sources */ = {isa = PBXBuildFile; fileRef = 6D54E8462822FBEB00D9AF2E /* SwipeableModalTests */; };
 		6D54E8512822FBEB00D9AF2E /* SwipeableModalUITests in Sources */ = {isa = PBXBuildFile; fileRef = 6D54E8502822FBEB00D9AF2E /* SwipeableModalUITests */; };
 		6D54E8532822FBEB00D9AF2E /* SwipeableModalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D54E8522822FBEB00D9AF2E /* SwipeableModalUITestsLaunchTests.swift */; };
+		6DDC27B12823821C004BB61E /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDC27B02823821C004BB61E /* TestView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,9 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6D0289FB2822FDC50099094A /* SlideOverCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideOverCard.swift; sourceTree = SOURCE_ROOT; };
-		6D0289FC2822FDC50099094A /* Grabber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grabber.swift; sourceTree = SOURCE_ROOT; };
 		6D0289FD2822FDC50099094A /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = SOURCE_ROOT; };
+		6D159CB5282596C90005E143 /* Swipeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swipeable.swift; sourceTree = "<group>"; };
 		6D54E8322822FBE800D9AF2E /* SwipeableModal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwipeableModal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D54E8352822FBE800D9AF2E /* SwipeableModalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableModalApp.swift; sourceTree = SOURCE_ROOT; };
 		6D54E8372822FBE800D9AF2E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = SOURCE_ROOT; };
@@ -50,6 +49,7 @@
 		6D54E84C2822FBEB00D9AF2E /* SwipeableModalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwipeableModalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D54E8502822FBEB00D9AF2E /* SwipeableModalUITests */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SwipeableModalUITests; path = /Users/polarizz/Downloads/SwipeableModal/SwipeableModalUITests; sourceTree = "<absolute>"; };
 		6D54E8522822FBEB00D9AF2E /* SwipeableModalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SwipeableModalUITestsLaunchTests.swift; path = /Users/polarizz/Downloads/SwipeableModal/SwipeableModalUITests/SwipeableModalUITestsLaunchTests.swift; sourceTree = "<absolute>"; };
+		6DDC27B02823821C004BB61E /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,13 +100,13 @@
 		6D54E8342822FBE800D9AF2E /* SwipeableModal */ = {
 			isa = PBXGroup;
 			children = (
-				6D0289FC2822FDC50099094A /* Grabber.swift */,
 				6D0289FD2822FDC50099094A /* MapView.swift */,
-				6D0289FB2822FDC50099094A /* SlideOverCard.swift */,
+				6D159CB5282596C90005E143 /* Swipeable.swift */,
 				6D54E8352822FBE800D9AF2E /* SwipeableModalApp.swift */,
 				6D54E8372822FBE800D9AF2E /* ContentView.swift */,
 				6D54E8392822FBEA00D9AF2E /* Assets.xcassets */,
 				6D54E83B2822FBEA00D9AF2E /* Preview Content */,
+				6DDC27B02823821C004BB61E /* TestView.swift */,
 			);
 			name = SwipeableModal;
 			sourceTree = "<group>";
@@ -269,10 +269,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D54E8382822FBE800D9AF2E /* ContentView.swift in Sources */,
-				6D0289FF2822FDC50099094A /* Grabber.swift in Sources */,
+				6DDC27B12823821C004BB61E /* TestView.swift in Sources */,
 				6D028A002822FDC50099094A /* MapView.swift in Sources */,
 				6D54E8362822FBE800D9AF2E /* SwipeableModalApp.swift in Sources */,
-				6D0289FE2822FDC50099094A /* SlideOverCard.swift in Sources */,
+				6D159CB6282596C90005E143 /* Swipeable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +439,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -468,6 +469,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
