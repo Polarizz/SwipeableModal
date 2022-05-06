@@ -16,6 +16,8 @@ struct Swipeable<Content: View>: View {
     // Gesture variables
     @State private var lastDrag: CGFloat = 0.0
     @State private var velocity: CGFloat = 0.0
+    @State private var banding: CGFloat = 4.0
+    @State private var edge: Bool = false
     
     // Gesture position
     @State var position = 0.0
@@ -53,17 +55,24 @@ struct Swipeable<Content: View>: View {
             .background(Color.white)
             .cornerRadius(10)
             .shadow(color: Color.black.opacity(0.13), radius: 10)
-            .offset(y: position + dragState.translation)
+            .offset(y:
+                position + (edge ? dragState.translation/banding : dragState.translation)
+            )
             .highPriorityGesture(
                 DragGesture(minimumDistance: 0.0, coordinateSpace: .local)
                     .updating($dragState) { drag, state, translation in
                         state = .dragging(translation: drag.translation.height)
                         
-//                        if dragState.translation.height > UIScreen.main.bounds.maxY-200 {
-//                            drag.translation.height = drag.translation.height/5
-//                        }
-                        
-                        print(state)
+                        DispatchQueue.main.async {
+                            if (position + dragState.translation > bottom) || (position + dragState.translation  < top) {
+                                edge = true
+                            } else {
+                                edge = false
+                            }
+                            
+                            print("Position", position, position + (edge ? (position + dragState.translation/banding) : dragState.translation))
+                            print("Banding", dragState.translation/banding)
+                        }
                     }
                     .onEnded { drag in
                         DispatchQueue.main.async {
@@ -94,8 +103,6 @@ struct Swipeable<Content: View>: View {
                             } else {
                                 position = closestPosition
                             }
-                            
-                            print("❌❌❌")
                         }
                     }
             )
