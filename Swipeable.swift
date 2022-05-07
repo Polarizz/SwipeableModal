@@ -58,8 +58,8 @@ struct Swipeable<Content: View>: View {
             .offset(y:
                 position + (edge ? dragState.translation/banding : dragState.translation)
             )
-            .highPriorityGesture(
-                DragGesture(minimumDistance: 0.0, coordinateSpace: .local)
+            .gesture(
+                DragGesture(minimumDistance: 10, coordinateSpace: .local)
                     .updating($dragState) { drag, state, translation in
                         state = .dragging(translation: drag.translation.height)
                         
@@ -70,8 +70,7 @@ struct Swipeable<Content: View>: View {
                                 edge = false
                             }
                             
-                            print("Position", position, position + (edge ? (position + dragState.translation/banding) : dragState.translation))
-                            print("Banding", dragState.translation/banding)
+                            print(position, position + (edge ? dragState.translation/banding : dragState.translation), position + dragState.translation)
                         }
                     }
                     .onEnded { drag in
