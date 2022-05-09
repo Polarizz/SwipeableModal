@@ -59,10 +59,12 @@ struct Swipeable<Content: View>: View {
                     state = .dragging(translation: drag.translation.height)
                     
                     DispatchQueue.main.async {
-                        if (position + dragState.translation) <= 0 {
-                            fullTop = true
-                        } else {
-                            fullTop = false
+                        withAnimation(.spring(response: 0.3, dampingFraction: 1)) {
+                            if (position + dragState.translation) <= 0 {
+                                fullTop = true
+                            } else {
+                                fullTop = false
+                            }
                         }
                         
                         //                       if (position + dragState.translation) >= bottom {
@@ -96,23 +98,26 @@ struct Swipeable<Content: View>: View {
                             closestPosition = positionBelow
                         }
                         
-                        if verticalDirection > 0 {
-                            position = positionBelow
-                        } else if verticalDirection < 0 {
-                            position = positionAbove
-                        } else {
-                            position = closestPosition
-                        }
-                        
-                        if position == top {
-                            fullTop = true
-                        } else {
-                            fullTop = false
+                        withAnimation(.interpolatingSpring(stiffness: 300.0, damping: 30.0, initialVelocity: 10.0)) {
+                            
+                            if verticalDirection > 0 {
+                                position = positionBelow
+                            } else if verticalDirection < 0 {
+                                position = positionAbove
+                            } else {
+                                position = closestPosition
+                            }
+                            
+                            if position == top {
+                                fullTop = true
+                            } else {
+                                fullTop = false
+                            }
                         }
                     }
                 }
         )
-        .animation(dragState.isDragging ? nil : .interpolatingSpring(stiffness: 300.0, damping: 30.0, initialVelocity: 10.0))
+        //        .animation(dragState.isDragging ? nil : .interpolatingSpring(stiffness: 300.0, damping: 30.0, initialVelocity: 10.0))
     }
 }
 

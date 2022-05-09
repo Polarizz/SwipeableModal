@@ -22,7 +22,7 @@ struct ContentView : View {
                         .padding(.top, 7)
                         .padding(.bottom, 16)
                         
-                        VStack(spacing: 0) {
+                        ScrollView {
                             VStack(spacing: 20) {
                                 Button(action: {
                                     withAnimation(.spring(response: 0.3, dampingFraction: 1)) { pressed.toggle() }
@@ -64,7 +64,7 @@ struct ContentView : View {
                         }
                     }
                 }
-                .edgesIgnoringSafeArea(.bottom)
+                .edgesIgnoringSafeArea(.all)
             )
     }
 }
