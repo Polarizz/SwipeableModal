@@ -14,7 +14,7 @@ struct Swipeable<Content: View>: View {
     @GestureState private var dragState = DragState.inactive
     
     // Gesture position
-    @State var position = UIScreen.main.bounds.maxY - 100
+    @State var position = UIScreen.main.bounds.maxY - 200
     @State var fullTop = false
     
     private var top: CGFloat {
@@ -26,7 +26,7 @@ struct Swipeable<Content: View>: View {
     }
     
     private var bottom: CGFloat {
-        return UIScreen.main.bounds.maxY - 100
+        return UIScreen.main.bounds.maxY - 200
     }
     
     init(@ViewBuilder content: () -> Content) {
@@ -37,12 +37,12 @@ struct Swipeable<Content: View>: View {
         VStack(alignment: .center, spacing: 0) {
             withAnimation(nil) {
                 content
+                    .padding(.top, fullTop ? UIApplication.shared.windows[0].safeAreaInsets.top : 0)
             }
             
             Spacer()
         }
-        .padding(.top, fullTop ? UIApplication.shared.windows[0].safeAreaInsets.top : 0)
-        .frame(height: UIScreen.main.bounds.height)
+        .frame(minHeight: UIScreen.main.bounds.height)
         .background(
             Color(.systemBackground)
                 .edgesIgnoringSafeArea(.all)
@@ -59,12 +59,10 @@ struct Swipeable<Content: View>: View {
                     state = .dragging(translation: drag.translation.height)
                     
                     DispatchQueue.main.async {
-                        withAnimation(.spring(response: 0.3, dampingFraction: 1)) {
-                            if (position + dragState.translation) <= 0 {
-                                fullTop = true
-                            } else {
-                                fullTop = false
-                            }
+                        if (position + dragState.translation) <= 0 {
+                            fullTop = true
+                        } else {
+                            fullTop = false
                         }
                         
                         //                       if (position + dragState.translation) >= bottom {
@@ -98,26 +96,23 @@ struct Swipeable<Content: View>: View {
                             closestPosition = positionBelow
                         }
                         
-                        withAnimation(.interpolatingSpring(stiffness: 300.0, damping: 30.0, initialVelocity: 10.0)) {
-                            
-                            if verticalDirection > 0 {
-                                position = positionBelow
-                            } else if verticalDirection < 0 {
-                                position = positionAbove
-                            } else {
-                                position = closestPosition
-                            }
-                            
-                            if position == top {
-                                fullTop = true
-                            } else {
-                                fullTop = false
-                            }
+                        if verticalDirection > 0 {
+                            position = positionBelow
+                        } else if verticalDirection < 0 {
+                            position = positionAbove
+                        } else {
+                            position = closestPosition
+                        }
+                        
+                        if position == top {
+                            fullTop = true
+                        } else {
+                            fullTop = false
                         }
                     }
                 }
         )
-        //        .animation(dragState.isDragging ? nil : .interpolatingSpring(stiffness: 300.0, damping: 30.0, initialVelocity: 10.0))
+        .animation(dragState.isDragging ? nil : .interpolatingSpring(stiffness: 300.0, damping: 30.0, initialVelocity: 10.0))
     }
 }
 
